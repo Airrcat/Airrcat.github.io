@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-05-16T07:37:56.000Z</updated>
+  <updated>2024-05-16T07:47:06.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,14 +21,15 @@
     <link href="http://example.com/2024/05/16/%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5%E5%B0%8F%E8%AE%B0/"/>
     <id>http://example.com/2024/05/16/%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5%E5%B0%8F%E8%AE%B0/</id>
     <published>2024-05-16T07:08:09.000Z</published>
-    <updated>2024-05-16T07:37:56.000Z</updated>
+    <updated>2024-05-16T07:47:06.000Z</updated>
     
-    <content type="html"><![CDATA[<p>简述：<br>报错注入的危害主要是查询数据方面，它自己很难做一些如提权之类的动作。<br>报错注入主要涉及：extractvalue()、updatexml()等。这些函数的功能和注入结果类似，但使用的参数会略有不同。<br>本文讨论到的报错注入主要是“xml”的报错注入，先讨论<strong>注入点</strong><br>简单的来说，在数据库中，一些操作xml文件的函数会遵循一种叫“XPATH”的格式规范。这个规范会比较严格，限制了一些字符。而当数据库查询语句试图调用上面提到的函数时，若给出的查询语句——也就是查询的目标XPATH就会触发“报错”<br>这里可以发现，触发报错是很容易的，但有报错不一定有注入。安全的查询在报错时只会返回用户所查询的语句，而若存在暴露，数据库会解析extractvalue里存在的一些查询语句并返回，导致攻击者可以通过报错注入去爬取数据库的数据。<br>payload案例：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://xxx.xxx.xxx/xxx/xxx/api/xxx/xxx?xxx=xxx%27%20AND%20EXTRACTVALUE(1,concat(0x7e,database(),0x7e))--%20xxxx</span><br></pre></td></tr></table></figure><p><img src="/2024/05/16/%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5%E5%B0%8F%E8%AE%B0/image-7.png" alt="alt text"><br>小结：<br>报错注入形式简单，判断简单，是一个可以模板化测试的漏洞（sqlmap）<br>而若有蓝队研判需求，主要关注报错注入的返回包是否<strong>没有返回查询语句</strong>而是返回其它一些有的没的。</p>]]></content>
+    <content type="html"><![CDATA[<h2><span id="简述">简述：</span></h2><p>报错注入的危害主要是查询数据方面，它自己很难做一些如提权之类的动作。</p><p>报错注入主要涉及：extractvalue()、updatexml()等。这些函数的功能和注入结果类似，但使用的参数会略有不同。</p><p>本文讨论到的报错注入主要是“xml”的报错注入，先讨论<strong>注入点</strong></p><p>简单的来说，在数据库中，一些操作xml文件的函数会遵循一种叫“XPATH”的格式规范。这个规范会比较严格，限制了一些字符。而当数据库查询语句试图调用上面提到的函数时，若给出的查询语句——也就是查询的目标XPATH就会触发“报错”</p><p>这里可以发现，触发报错是很容易的，但有报错不一定有注入。安全的查询在报错时只会返回用户所查询的语句，而若存在暴露，数据库会解析extractvalue里存在的一些查询语句并返回，导致攻击者可以通过报错注入去爬取数据库的数据。</p><h2><span id="payload案例">payload案例：</span></h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://xxx.xxx.xxx/xxx/xxx/api/xxx/xxx?xxx=xxx%27%20AND%20EXTRACTVALUE(1,concat(0x7e,database(),0x7e))--%20xxxx</span><br></pre></td></tr></table></figure><p><img src="/2024/05/16/%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5%E5%B0%8F%E8%AE%B0/image-7.png" alt="alt text"></p><h2><span id="小结">小结：</span></h2><p>报错注入形式简单，判断简单，是一个可以模板化测试的漏洞（sqlmap）<br>而若有蓝队研判需求，主要关注报错注入的返回包是否<strong>没有返回查询语句</strong>而是返回其它一些有的没的。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;简述：&lt;br&gt;报错注入的危害主要是查询数据方面，它自己很难做一些如提权之类的动作。&lt;br&gt;报错注入主要涉及：extractvalue()、updatexml()等。这些函数的功能和注入结果类似，但使用的参数会略有不同。&lt;br&gt;本文讨论到的报错注入主要是“xml”的报错注入，</summary>
+    <summary type="html">&lt;h2&gt;&lt;span id=&quot;简述&quot;&gt;简述：&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;报错注入的危害主要是查询数据方面，它自己很难做一些如提权之类的动作。&lt;/p&gt;
+&lt;p&gt;报错注入主要涉及：extractvalue()、updatexml()等。这些函数的功能和注入结果类似，但使用的参数会略有不</summary>
       
     
     
