@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-06-17T02:31:16.000Z</updated>
+  <updated>2024-06-17T02:50:56.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,18 +17,18 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>a adjustment about unresolved stack usage in binary ninja</title>
-    <link href="http://example.com/2024/06/17/a-adjustment-about-unresolved-stack-usage-in-binary-ninja/"/>
-    <id>http://example.com/2024/06/17/a-adjustment-about-unresolved-stack-usage-in-binary-ninja/</id>
+    <title>Adjustment about unresolved stack usage in binary ninja</title>
+    <link href="http://example.com/2024/06/17/Adjustment-about-unresolved-stack-usage-in-binary-ninja/"/>
+    <id>http://example.com/2024/06/17/Adjustment-about-unresolved-stack-usage-in-binary-ninja/</id>
     <published>2024-06-17T02:03:34.000Z</published>
-    <updated>2024-06-17T02:31:16.000Z</updated>
+    <updated>2024-06-17T02:50:56.000Z</updated>
     
-    <content type="html"><![CDATA[<p>this is a short article about the error “This function has unresolved stack usage.View graph of stack usage to resolve” in binary ninja and the function “Set Stack Adjustment”.</p><p>Acctually, this error has the similar solve way as IDA.<br>First, you should step in the “Graph of stack usage” as the image note:<br><img src="/2024/06/17/a-adjustment-about-unresolved-stack-usage-in-binary-ninja/image-10.png" alt="alt text"><br>In this Graph, you should care about the “Green Block” and “Bule Block”. Green means it is fine. and Blue, as the first sentence of blue block, is the error stack.<br><img src="/2024/06/17/a-adjustment-about-unresolved-stack-usage-in-binary-ninja/image-11.png" alt="alt text"><br>And,by <strong>right click</strong> in the first call of blue block, click the “Set Stack Adjustment” you can input number to adjust stack analyze in this call:<br><img src="/2024/06/17/a-adjustment-about-unresolved-stack-usage-in-binary-ninja/image-12.png" alt="alt text"><br><img src="/2024/06/17/a-adjustment-about-unresolved-stack-usage-in-binary-ninja/image-13.png" alt="alt text"><br>But soon, a confused thing : why this error not solved? And graph not changed.<br>In fact, the reason is: this “Graph of stack usage” is a static graph. It will not update with our adjust just in time.So, you can re-step in this graph again to check your adjustment if it works.<br>In this case, i adjust two call’s stack usage, and set adjustment by 1<br><img src="/2024/06/17/a-adjustment-about-unresolved-stack-usage-in-binary-ninja/image-14.png" alt="alt text"><br>and zero<br><img src="/2024/06/17/a-adjustment-about-unresolved-stack-usage-in-binary-ninja/image-15.png" alt="alt text"><br><img src="/2024/06/17/a-adjustment-about-unresolved-stack-usage-in-binary-ninja/image-16.png" alt="alt text"></p>]]></content>
+    <content type="html"><![CDATA[<p>This is a short article about the error <strong>“This function has unresolved stack usage.View graph of stack usage to resolve”</strong> in binary ninja and the function <strong>“Set Stack Adjustment”</strong>.</p><p>Acctually, this error has the similar solve way as IDA.<br>First, you should <strong>step in the “Graph of stack usage”</strong> as the image note:<br><img src="/2024/06/17/Adjustment-about-unresolved-stack-usage-in-binary-ninja/image-10.png" alt="alt text"><br>In this Graph, you should care about the “Green Block” and <strong>“Bule Block”</strong>. Green means it is fine. and Blue, as the first sentence of blue block, is the <strong>error stack</strong>.<br><img src="/2024/06/17/Adjustment-about-unresolved-stack-usage-in-binary-ninja/image-11.png" alt="alt text"><br>And, by <strong>right click</strong> in the first call of blue block, click the <strong>“Set Stack Adjustment”</strong> you can input <strong>number</strong> to adjust stack analyze in this call:<br><img src="/2024/06/17/Adjustment-about-unresolved-stack-usage-in-binary-ninja/image-12.png" alt="alt text"><br><img src="/2024/06/17/Adjustment-about-unresolved-stack-usage-in-binary-ninja/image-13.png" alt="alt text"><br>But soon, a confused thing : why this error not solved? And <strong>graph not changed</strong>.<br>In fact, the reason is: this <strong>“Graph of stack usage” is a static graph</strong>. It will not update with our adjust just in time. So, you can re-step in this graph again to check your adjustment if it works.<br>In this case, I adjust two call’s stack usage, and set adjustment by 1<br><img src="/2024/06/17/Adjustment-about-unresolved-stack-usage-in-binary-ninja/image-14.png" alt="alt text"><br>by 0<br><img src="/2024/06/17/Adjustment-about-unresolved-stack-usage-in-binary-ninja/image-15.png" alt="alt text"><br>and solved.<br><img src="/2024/06/17/Adjustment-about-unresolved-stack-usage-in-binary-ninja/image-16.png" alt="alt text"></p><p><a href="https://buuoj.cn/challenges#[RCTF2019]DontEatMe">example: RCTF2019-DontEatMe-main</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;this is a short article about the error “This function has unresolved stack usage.View graph of stack usage to resolve” in binary ninja a</summary>
+    <summary type="html">&lt;p&gt;This is a short article about the error &lt;strong&gt;“This function has unresolved stack usage.View graph of stack usage to resolve”&lt;/strong&gt; </summary>
       
     
     
