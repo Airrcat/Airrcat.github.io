@@ -3,11 +3,11 @@
   <title>Air_katty</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://airrcat.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://airrcat.github.io/"/>
   <updated>2024-07-15T10:27:44.000Z</updated>
-  <id>http://example.com/</id>
+  <id>https://airrcat.github.io/</id>
   
   <author>
     <name>Aircat</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>blowfish例题 RCTF-DontEatMe</title>
-    <link href="http://example.com/2024/07/15/blowfish%E4%BE%8B%E9%A2%98-RCTF-DontEatMe/"/>
-    <id>http://example.com/2024/07/15/blowfish%E4%BE%8B%E9%A2%98-RCTF-DontEatMe/</id>
+    <link href="https://airrcat.github.io/2024/07/15/blowfish%E4%BE%8B%E9%A2%98-RCTF-DontEatMe/"/>
+    <id>https://airrcat.github.io/2024/07/15/blowfish%E4%BE%8B%E9%A2%98-RCTF-DontEatMe/</id>
     <published>2024-07-15T08:03:42.000Z</published>
     <updated>2024-07-15T10:27:44.000Z</updated>
     
@@ -34,20 +34,20 @@
     
     
     
-    <category term="CTF" scheme="http://example.com/tags/CTF/"/>
+    <category term="CTF" scheme="https://airrcat.github.io/tags/CTF/"/>
     
-    <category term="Reverse" scheme="http://example.com/tags/Reverse/"/>
+    <category term="Reverse" scheme="https://airrcat.github.io/tags/Reverse/"/>
     
-    <category term="Blowfish" scheme="http://example.com/tags/Blowfish/"/>
+    <category term="Blowfish" scheme="https://airrcat.github.io/tags/Blowfish/"/>
     
-    <category term="Maze" scheme="http://example.com/tags/Maze/"/>
+    <category term="Maze" scheme="https://airrcat.github.io/tags/Maze/"/>
     
   </entry>
   
   <entry>
     <title>Short solution about unicorn error: Could not allocate dynamic translator buffer</title>
-    <link href="http://example.com/2024/06/18/Short-solution-about-unicorn-error-Could-not-allocate-dynamic-translator-buffer/"/>
-    <id>http://example.com/2024/06/18/Short-solution-about-unicorn-error-Could-not-allocate-dynamic-translator-buffer/</id>
+    <link href="https://airrcat.github.io/2024/06/18/Short-solution-about-unicorn-error-Could-not-allocate-dynamic-translator-buffer/"/>
+    <id>https://airrcat.github.io/2024/06/18/Short-solution-about-unicorn-error-Could-not-allocate-dynamic-translator-buffer/</id>
     <published>2024-06-18T07:40:23.000Z</published>
     <updated>2024-06-18T08:48:02.000Z</updated>
     
@@ -62,16 +62,16 @@
     
     
     
-    <category term="unicorn" scheme="http://example.com/tags/unicorn/"/>
+    <category term="unicorn" scheme="https://airrcat.github.io/tags/unicorn/"/>
     
   </entry>
   
   <entry>
     <title>Adjustment about unresolved stack usage in binary ninja</title>
-    <link href="http://example.com/2024/06/17/Adjustment-about-unresolved-stack-usage-in-binary-ninja/"/>
-    <id>http://example.com/2024/06/17/Adjustment-about-unresolved-stack-usage-in-binary-ninja/</id>
+    <link href="https://airrcat.github.io/2024/06/17/Adjustment-about-unresolved-stack-usage-in-binary-ninja/"/>
+    <id>https://airrcat.github.io/2024/06/17/Adjustment-about-unresolved-stack-usage-in-binary-ninja/</id>
     <published>2024-06-17T02:03:34.000Z</published>
-    <updated>2024-06-17T02:50:56.000Z</updated>
+    <updated>2024-07-16T02:02:16.000Z</updated>
     
     <content type="html"><![CDATA[<p>This is a short article about the error <strong>“This function has unresolved stack usage.View graph of stack usage to resolve”</strong> in binary ninja and the function <strong>“Set Stack Adjustment”</strong>.</p><p>Acctually, this error has the similar solve way as IDA.<br>First, you should <strong>step in the “Graph of stack usage”</strong> as the image note:<br><img src="/2024/06/17/Adjustment-about-unresolved-stack-usage-in-binary-ninja/image-10.png" alt="alt text"><br>In this Graph, you should care about the “Green Block” and <strong>“Bule Block”</strong>. Green means it is fine. and Blue, as the first sentence of blue block, is the <strong>error stack</strong>.<br><img src="/2024/06/17/Adjustment-about-unresolved-stack-usage-in-binary-ninja/image-11.png" alt="alt text"><br>And, by <strong>right click</strong> in the first call of blue block, click the <strong>“Set Stack Adjustment”</strong> you can input <strong>number</strong> to adjust stack analyze in this call:<br><img src="/2024/06/17/Adjustment-about-unresolved-stack-usage-in-binary-ninja/image-12.png" alt="alt text"><br><img src="/2024/06/17/Adjustment-about-unresolved-stack-usage-in-binary-ninja/image-13.png" alt="alt text"><br>But soon, a confused thing : why this error not solved? And <strong>graph not changed</strong>.<br>In fact, the reason is: this <strong>“Graph of stack usage” is a static graph</strong>. It will not update with our adjust just in time. So, you can re-step in this graph again to check your adjustment if it works.<br>In this case, I adjust two call’s stack usage, and set adjustment by 1<br><img src="/2024/06/17/Adjustment-about-unresolved-stack-usage-in-binary-ninja/image-14.png" alt="alt text"><br>by 0<br><img src="/2024/06/17/Adjustment-about-unresolved-stack-usage-in-binary-ninja/image-15.png" alt="alt text"><br>and solved.<br><img src="/2024/06/17/Adjustment-about-unresolved-stack-usage-in-binary-ninja/image-16.png" alt="alt text"></p><p><a href="https://buuoj.cn/challenges#[RCTF2019]DontEatMe">example: RCTF2019-DontEatMe-main</a></p>]]></content>
     
@@ -84,16 +84,16 @@
     
     
     
-    <category term="reverse-engine" scheme="http://example.com/tags/reverse-engine/"/>
+    <category term="binary-ninja" scheme="https://airrcat.github.io/tags/binary-ninja/"/>
     
-    <category term="binary-ninja" scheme="http://example.com/tags/binary-ninja/"/>
+    <category term="Reverse" scheme="https://airrcat.github.io/tags/Reverse/"/>
     
   </entry>
   
   <entry>
     <title>Cpython and Cpython hook -1</title>
-    <link href="http://example.com/2024/05/30/Cpython-and-Cpython-hook-1/"/>
-    <id>http://example.com/2024/05/30/Cpython-and-Cpython-hook-1/</id>
+    <link href="https://airrcat.github.io/2024/05/30/Cpython-and-Cpython-hook-1/"/>
+    <id>https://airrcat.github.io/2024/05/30/Cpython-and-Cpython-hook-1/</id>
     <published>2024-05-30T09:16:26.000Z</published>
     <updated>2024-05-31T02:16:48.000Z</updated>
     
@@ -109,14 +109,14 @@
     
     
     
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    <category term="Python" scheme="https://airrcat.github.io/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>XPATH报错注入小记</title>
-    <link href="http://example.com/2024/05/16/%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5%E5%B0%8F%E8%AE%B0/"/>
-    <id>http://example.com/2024/05/16/%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5%E5%B0%8F%E8%AE%B0/</id>
+    <link href="https://airrcat.github.io/2024/05/16/%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5%E5%B0%8F%E8%AE%B0/"/>
+    <id>https://airrcat.github.io/2024/05/16/%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5%E5%B0%8F%E8%AE%B0/</id>
     <published>2024-05-16T07:08:09.000Z</published>
     <updated>2024-05-16T07:47:06.000Z</updated>
     
@@ -132,18 +132,18 @@
     
     
     
-    <category term="流量分析" scheme="http://example.com/tags/%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90/"/>
+    <category term="流量分析" scheme="https://airrcat.github.io/tags/%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90/"/>
     
-    <category term="Web" scheme="http://example.com/tags/Web/"/>
+    <category term="Web" scheme="https://airrcat.github.io/tags/Web/"/>
     
-    <category term="安全监控" scheme="http://example.com/tags/%E5%AE%89%E5%85%A8%E7%9B%91%E6%8E%A7/"/>
+    <category term="安全监控" scheme="https://airrcat.github.io/tags/%E5%AE%89%E5%85%A8%E7%9B%91%E6%8E%A7/"/>
     
   </entry>
   
   <entry>
     <title>ctf做题记录-svm</title>
-    <link href="http://example.com/2024/04/30/ctf%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95-svm/"/>
-    <id>http://example.com/2024/04/30/ctf%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95-svm/</id>
+    <link href="https://airrcat.github.io/2024/04/30/ctf%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95-svm/"/>
+    <id>https://airrcat.github.io/2024/04/30/ctf%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95-svm/</id>
     <published>2024-04-30T07:38:52.000Z</published>
     <updated>2024-05-21T00:54:10.000Z</updated>
     
@@ -158,14 +158,14 @@
     
     
     
-    <category term="CTF" scheme="http://example.com/tags/CTF/"/>
+    <category term="CTF" scheme="https://airrcat.github.io/tags/CTF/"/>
     
   </entry>
   
   <entry>
     <title>some frida scripts</title>
-    <link href="http://example.com/2024/04/30/some-frida-scripts/"/>
-    <id>http://example.com/2024/04/30/some-frida-scripts/</id>
+    <link href="https://airrcat.github.io/2024/04/30/some-frida-scripts/"/>
+    <id>https://airrcat.github.io/2024/04/30/some-frida-scripts/</id>
     <published>2024-04-30T02:44:22.000Z</published>
     <updated>2024-04-30T03:43:12.000Z</updated>
     
@@ -192,16 +192,16 @@
     
     
     
-    <category term="Android" scheme="http://example.com/tags/Android/"/>
+    <category term="Android" scheme="https://airrcat.github.io/tags/Android/"/>
     
-    <category term="Frida" scheme="http://example.com/tags/Frida/"/>
+    <category term="Frida" scheme="https://airrcat.github.io/tags/Frida/"/>
     
   </entry>
   
   <entry>
     <title>hash拓展攻击与例题hash_append</title>
-    <link href="http://example.com/2024/04/29/hash%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB%E4%B8%8E%E4%BE%8B%E9%A2%98hash-append/"/>
-    <id>http://example.com/2024/04/29/hash%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB%E4%B8%8E%E4%BE%8B%E9%A2%98hash-append/</id>
+    <link href="https://airrcat.github.io/2024/04/29/hash%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB%E4%B8%8E%E4%BE%8B%E9%A2%98hash-append/"/>
+    <id>https://airrcat.github.io/2024/04/29/hash%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB%E4%B8%8E%E4%BE%8B%E9%A2%98hash-append/</id>
     <published>2024-04-29T08:28:58.000Z</published>
     <updated>2024-04-30T01:30:22.000Z</updated>
     
@@ -217,16 +217,16 @@
     
     
     
-    <category term="CTF" scheme="http://example.com/tags/CTF/"/>
+    <category term="CTF" scheme="https://airrcat.github.io/tags/CTF/"/>
     
-    <category term="Crypto" scheme="http://example.com/tags/Crypto/"/>
+    <category term="Crypto" scheme="https://airrcat.github.io/tags/Crypto/"/>
     
   </entry>
   
   <entry>
     <title>xyctf2023-re-writeup</title>
-    <link href="http://example.com/2024/04/28/xyctf2023-re-writeup/"/>
-    <id>http://example.com/2024/04/28/xyctf2023-re-writeup/</id>
+    <link href="https://airrcat.github.io/2024/04/28/xyctf2023-re-writeup/"/>
+    <id>https://airrcat.github.io/2024/04/28/xyctf2023-re-writeup/</id>
     <published>2024-04-28T14:33:07.000Z</published>
     <updated>2024-04-29T01:54:44.000Z</updated>
     
@@ -243,14 +243,14 @@
     
     
     
-    <category term="CTF" scheme="http://example.com/tags/CTF/"/>
+    <category term="CTF" scheme="https://airrcat.github.io/tags/CTF/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2024/04/26/hello-world/"/>
-    <id>http://example.com/2024/04/26/hello-world/</id>
+    <link href="https://airrcat.github.io/2024/04/26/hello-world/"/>
+    <id>https://airrcat.github.io/2024/04/26/hello-world/</id>
     <published>2024-04-26T14:24:48.660Z</published>
     <updated>2024-04-26T14:24:50.000Z</updated>
     
