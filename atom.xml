@@ -6,7 +6,7 @@
   <link href="https://airrcat.github.io/atom.xml" rel="self"/>
   
   <link href="https://airrcat.github.io/"/>
-  <updated>2024-07-17T08:02:32.000Z</updated>
+  <updated>2024-08-12T12:27:50.000Z</updated>
   <id>https://airrcat.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>开发看板</title>
+    <link href="https://airrcat.github.io/2024/08/12/%E5%BC%80%E5%8F%91%E7%9C%8B%E6%9D%BF/"/>
+    <id>https://airrcat.github.io/2024/08/12/%E5%BC%80%E5%8F%91%E7%9C%8B%E6%9D%BF/</id>
+    <published>2024-08-12T11:58:53.000Z</published>
+    <updated>2024-08-12T12:27:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2><span id="1-tool-for-search-ip-and-domain-in-binary-stream">1. Tool for search ip and domain in binary stream</span></h2><p><strong>编写语言</strong>：Python<br><strong>开发状态</strong>：基本完成</p><p>基本完成，但是因为和关键词搜索撞了，还得重新做一下。<br><strong>todo</strong></p><ul><li><input disabled type="checkbox"> 做成pyd</li><li><input disabled type="checkbox"> 做成命令行工具</li><li><input disabled type="checkbox"> 拆分</li></ul><h2><span id="2-tool-for-search-keyword-in-file">2. Tool for search keyword in file</span></h2><p><strong>编写语言</strong>：Python<br><strong>开发状态</strong>：初步</p><ol><li>完成任务实践</li><li>基本能读完csv</li><li>基本能读完excel</li><li>去重复</li></ol><ul><li><input disabled type="checkbox"> ppt读取</li><li><input disabled type="checkbox"> word读取</li><li><input disabled type="checkbox"> 统一输出流</li><li><input disabled type="checkbox"> 搜索效率优化</li><li><input disabled type="checkbox"> GUI</li><li><input disabled type="checkbox"> 交互优化</li><li><input disabled type="checkbox"> 结果优化</li></ul><h2><span id="3-tool-for-load-pe-file-and-parse-pe-info-in-unicorn2">3. Tool for load pe file and parse pe info in unicorn2</span></h2><p><strong>MAIN TARGET</strong><br><strong>编写语言</strong>：Python<br><strong>开发状态</strong>：初步<br>期待实现一个自动装载PE段、解析导入表、导入函数，能自动解析导入函数的功能，这样在做模拟执行时，我只需要考虑hook的功能。</p><ol><li>完成x86 PE解析</li><li>完成段加载</li></ol><ul><li><input disabled type="checkbox"> elf</li><li><input disabled type="checkbox"> 多架构</li><li><input disabled type="checkbox"> 段结构优化</li><li><input disabled type="checkbox"> 函数自动解析</li><li><input disabled type="checkbox"> 模板化</li></ul><h2><span id="4-tool-for-anti-obf-and-control-flow-flattening">4. Tool for anti obf and control flow flattening</span></h2><p><strong>编写语言</strong>：Python<br><strong>开发状态</strong>：筹划</p><p>unicorn、qiling trace指令并dump，把平坦化、混淆的指令线性化。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2&gt;&lt;span id=&quot;1-tool-for-search-ip-and-domain-in-binary-stream&quot;&gt;1. Tool for search ip and domain in binary stream&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;编写语言</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>hexo、github博客加入搜索引擎的方法简述</title>
