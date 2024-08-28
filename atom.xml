@@ -6,7 +6,7 @@
   <link href="https://airrcat.github.io/atom.xml" rel="self"/>
   
   <link href="https://airrcat.github.io/"/>
-  <updated>2024-08-12T12:27:50.000Z</updated>
+  <updated>2024-08-28T05:26:52.000Z</updated>
   <id>https://airrcat.github.io/</id>
   
   <author>
@@ -15,6 +15,47 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo g不生成任何文件的错误</title>
+    <link href="https://airrcat.github.io/2024/08/28/hexo-g%E4%B8%8D%E7%94%9F%E6%88%90%E4%BB%BB%E4%BD%95%E6%96%87%E4%BB%B6%E7%9A%84%E9%94%99%E8%AF%AF/"/>
+    <id>https://airrcat.github.io/2024/08/28/hexo-g%E4%B8%8D%E7%94%9F%E6%88%90%E4%BB%BB%E4%BD%95%E6%96%87%E4%BB%B6%E7%9A%84%E9%94%99%E8%AF%AF/</id>
+    <published>2024-08-28T05:23:26.000Z</published>
+    <updated>2024-08-28T05:26:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>问题描述：<br>    <code>hexo g</code>不在public文件夹下生成任何文件，只生成了image、archive等几个空文件夹。<br>    <code>hexo g --debug</code>不生成任何错误信息，但是hexo generator 仅有几步处理<br>问题解决：<br>    更新node为实验版本v22后出现此问题，回退至LTS版本v20后问题解决。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;问题描述：&lt;br&gt;    &lt;code&gt;hexo g&lt;/code&gt;不在public文件夹下生成任何文件，只生成了image、archive等几个空文件夹。&lt;br&gt;    &lt;code&gt;hexo g --debug&lt;/code&gt;不生成任何错误信息，但是hexo generator</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>About hexo generate nothing in public folder</title>
+    <link href="https://airrcat.github.io/2024/08/28/About-hexo-generate-nothing-in-public-folder/"/>
+    <id>https://airrcat.github.io/2024/08/28/About-hexo-generate-nothing-in-public-folder/</id>
+    <published>2024-08-28T05:14:44.000Z</published>
+    <updated>2024-08-28T05:22:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>if you run <code>hexo g</code> and there nothing new in public folder, you can check the <strong>version of nodejs</strong>.</p><p>In my case, I first use hexo in nodejs version 20.16.0, it is a LTS version and hexo support it.</p><p>But when i update nodejs to 22.6.0(latest), command <code>hexo g</code> can not work ,it just leave some empty folder in public and no any error debug even i use <code>hexo g --debug</code></p><p>So if you has similar problem, you can switch you nodejs version to the LTS.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;if you run &lt;code&gt;hexo g&lt;/code&gt; and there nothing new in public folder, you can check the &lt;strong&gt;version of nodejs&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;In my</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>开发看板</title>
