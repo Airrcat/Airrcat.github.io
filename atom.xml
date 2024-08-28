@@ -75,9 +75,9 @@
     
     
     
-    <category term="CTF" scheme="https://airrcat.github.io/tags/CTF/"/>
-    
     <category term="Reverse" scheme="https://airrcat.github.io/tags/Reverse/"/>
+    
+    <category term="CTF" scheme="https://airrcat.github.io/tags/CTF/"/>
     
     <category term="Blowfish" scheme="https://airrcat.github.io/tags/Blowfish/"/>
     
@@ -125,9 +125,9 @@
     
     
     
-    <category term="binary-ninja" scheme="https://airrcat.github.io/tags/binary-ninja/"/>
-    
     <category term="Reverse" scheme="https://airrcat.github.io/tags/Reverse/"/>
+    
+    <category term="binary-ninja" scheme="https://airrcat.github.io/tags/binary-ninja/"/>
     
   </entry>
   
