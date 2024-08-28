@@ -1,53 +1,335 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Aircat"><title>Air_katty</title><meta name="description" content="悲郁蓝天。"><meta name="keywords" content="Blog,CTF,Cyber Security"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta id="site_root_url" data="/"><meta id="default-theme" data="light"><meta name="renderer" content="webkit"><link rel="shortcut icon" type="image/x-icon" href="/images/favicon.jpg"><link rel="stylesheet" href="/css/theme/light.css"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/insight.css"><link rel="stylesheet" href="/css/search.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><script src="/js/url_for.js"></script><script src="/js/friends-link-generator.js"></script><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/site.js"></script><script src="/js/router.js"></script><script src="/js/darkLightToggle.js"></script><script src="/js/add-bookmark.js"></script><meta name="generator" content="Hexo 7.2.0"></head><body><main-outlet><div class="page-top animated"><div class="nav"><li> <a class="current" href="/">Home</a></li><li> <a href="/archives">Archives</a></li><li> <a href="/tags">Tags</a></li><li> <a href="/about">About</a></li><li> <a href="/links">Links</a></li></div><div class="information"><div class="nav_right_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)" style="display:none;"> </a></li><li><a class="fa fa-search" onclick="openWindow();"></a></li><li><a class="fa fa-sun-o" onclick="darkLightToggle();"></a></li></div><div class="avatar"><img src="/images/smallpanda.jpg"></div></div></div><div class="sidebar animated"><div class="sidebar-top"><div class="logo-title"><div class="title"><img src="/images/mimi.gif" style="width:220px;" alt="favicon"><h3 title=""><a href="/">Air_katty</a></h3><div class="description"><p>悲郁蓝天。</p></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="https://github.com/airrcat"><i class="fa fa-github"></i></a></li></ul></div></div><div class="footer"><div class="p"> <span> 全站CC-BY-SA-3.0 </span><i class="fa fa-star"></i><span> Aircat</span></div><div class="by_farbox"><span>Powered by </span><a href="https://hexo.io/zh-cn/" target="_blank">Hexo </a><span> & </span><a href="https://github.com/Lhcfl/hexo-theme-anatolo" target="_blank">Anatolo </a></div><div class="beian"></div></div></div><div class="main animated fadeInDown"><div class="autopagerize_page_element"><div class="content"><div class="post animated"><div class="post-title"><h3><a href="/2024/08/12/%E5%BC%80%E5%8F%91%E7%9C%8B%E6%9D%BF/">开发看板</a></h3></div><div class="post-content"><p>1. Tool for search ip and domain in binary stream编写语言：Python开发状态：基本完成
-基本完成，但是因为和关键词搜索撞了，还得重新做一下。todo
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<!-- so meta -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="HandheldFriendly" content="True" />
+	<meta
+		name="viewport"
+		content="width=device-width, initial-scale=1, maximum-scale=5"
+	/>
+	<link
+		rel="stylesheet"
+		type="text/css"
+		href="https://fonts.font.im/css?family=Noto+Sans+SC:normal,bold,italic"
+	/>
+	<meta property="og:type" content="website">
+<meta property="og:title" content="Air_katty">
+<meta property="og:url" content="https://airrcat.github.io/index.html">
+<meta property="og:site_name" content="Air_katty">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Aircat">
+<meta name="twitter:card" content="summary">    
+	<link
+		rel="shortcut icon"
+		href="/images/mimi.gif"
+	/>
+	   
+	<link
+		rel="icon"
+		type="image/png"
+		href="/images/mimi.gif"
+		sizes="192x192"
+	/>
+	   
+	<link
+		rel="apple-touch-icon"
+		sizes="180x180"
+		href="/images/mimi.gif"
+	/>
+	  
+	<!-- title -->
+	<title>Air_katty</title>
+	<!-- async scripts -->
+	<!-- Google Analytics -->
 
- 做成pyd
- 做成命令行工具
- 拆分
-
-2. Tool for search keyword in file...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2024-08-12</span><span class="leancloud_visitors"></span><span>About 286 words, 57 sec  read</span></div></div></div></div><div class="post animated"><div class="post-title"><h3><a href="/2024/07/17/hexo-%E5%8D%9A%E5%AE%A2%E5%8A%A0%E5%85%A5%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%9A%84%E6%96%B9%E6%B3%95%E7%AE%80%E8%BF%B0/">hexo、github博客加入搜索引擎的方法简述</a></h3></div><div class="post-content"><p>about:hexo、github.io本篇考虑两个搜索引擎：bing、google。（百度引擎需要实名认证，因此撇弃）
-bing - Webmaster Tool查看自家博客有没有加入搜索引擎：site:https://yourblog.github.io/如有则能查看到类似如下：如没有,则可搜索”bing 网...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2024-07-17</span><span class="leancloud_visitors"></span><span>About 477 words, 1 min 35 sec  read</span></div></div></div></div><div class="post animated"><div class="post-title"><h3><a href="/2024/07/15/blowfish%E4%BE%8B%E9%A2%98-RCTF-DontEatMe/">blowfish例题 RCTF-DontEatMe</a></h3></div><div class="post-content"><p>本题的主要考点是Blowfish算法。附带反调试、迷宫程序的开始阶段除了输入之外，还固定了一个随机数种子，并通过动态获取Ntdll地址的方式去调用ZwSetInformationThread来反调试。这里可以把该函数直接nop。而为了考虑栈平衡，需要计算有多少个push、call需要nop或者直接nop一片。我将...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2024-07-15</span><i class="fa fa-tag"></i><a class="tag" href="/tags/CTF/" title="CTF">CTF </a><i class="fa fa-tag"></i><a class="tag" href="/tags/Reverse/" title="Reverse">Reverse </a><i class="fa fa-tag"></i><a class="tag" href="/tags/Blowfish/" title="Blowfish">Blowfish </a><i class="fa fa-tag"></i><a class="tag" href="/tags/Maze/" title="Maze">Maze </a><span class="leancloud_visitors"></span><span>About 1520 words, 5 min 4 sec  read</span></div></div></div></div><div class="post animated"><div class="post-title"><h3><a href="/2024/06/18/Short-solution-about-unicorn-error-Could-not-allocate-dynamic-translator-buffer/">Short solution about unicorn error: Could not allocate dynamic translator buffer</a></h3></div><div class="post-content"><p>this error occured when i try to emu 1000+ elf file and about 100 times.sample from CFI-CTF 2018 Automated Reversing
-exp:
-12345uc = unicorn.Uc(UC_ARCH_X86,UC...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2024-06-18</span><i class="fa fa-tag"></i><a class="tag" href="/tags/unicorn/" title="unicorn">unicorn </a><span class="leancloud_visitors"></span><span>About 342 words, 1 min 8 sec  read</span></div></div></div></div><div class="post animated"><div class="post-title"><h3><a href="/2024/06/17/Adjustment-about-unresolved-stack-usage-in-binary-ninja/">Adjustment about unresolved stack usage in binary ninja</a></h3></div><div class="post-content"><p>This is a short article about the error “This function has unresolved stack usage.View graph of stack usage to resolve” in binary ninja and the function “Set...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2024-06-17</span><i class="fa fa-tag"></i><a class="tag" href="/tags/binary-ninja/" title="binary-ninja">binary-ninja </a><i class="fa fa-tag"></i><a class="tag" href="/tags/Reverse/" title="Reverse">Reverse </a><span class="leancloud_visitors"></span><span>About 202 words, 40 sec  read</span></div></div></div></div><div class="post animated"><div class="post-title"><h3><a href="/2024/05/30/Cpython-and-Cpython-hook-1/">Cpython and Cpython hook -1</a></h3></div><div class="post-content"><p>test.pyx
-123456def a(arg):    print(arg)def b(arg):    print(arg)
-setup.py
-123456from setuptools import setupfrom Cython.Build import cythonizesetup(    ext_...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2024-05-30</span><i class="fa fa-tag"></i><a class="tag" href="/tags/Python/" title="Python">Python </a><span class="leancloud_visitors"></span><span>About 124 words, 24 sec  read</span></div></div></div></div><div class="post animated"><div class="post-title"><h3><a href="/2024/05/16/%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5%E5%B0%8F%E8%AE%B0/">XPATH报错注入小记</a></h3></div><div class="post-content"><p>简述：报错注入的危害主要是查询数据方面，它自己很难做一些如提权之类的动作。
-报错注入主要涉及：extractvalue()、updatexml()等。这些函数的功能和注入结果类似，但使用的参数会略有不同。
-本文讨论到的报错注入主要是“xml”的报错注入，先讨论注入点
-简单的来说，在数据库中，一些操作xml文件的函...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2024-05-16</span><i class="fa fa-tag"></i><a class="tag" href="/tags/流量分析/" title="流量分析">流量分析 </a><i class="fa fa-tag"></i><a class="tag" href="/tags/Web/" title="Web">Web </a><i class="fa fa-tag"></i><a class="tag" href="/tags/安全监控/" title="安全监控">安全监控 </a><span class="leancloud_visitors"></span><span>About 413 words, 1 min 22 sec  read</span></div></div></div></div><div class="post animated"><div class="post-title"><h3><a href="/2024/04/30/ctf%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95-svm/">ctf做题记录-svm</a></h3></div><div class="post-content"><p>待补完导入表为空，纯静态编译经检查初始化和推出程序均空程序执行会有 input 字符串，这是线索（这里用 ida 远程启动，会有其它信息input 直接在 string 中搜到，有如下交叉引用：直接下断点动调，发现 1780 是 main 函数，会 printf(input)init 函数做了一个初始化：sub_...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2024-04-30</span><i class="fa fa-tag"></i><a class="tag" href="/tags/CTF/" title="CTF">CTF </a><span class="leancloud_visitors"></span><span>About 491 words, 1 min 38 sec  read</span></div></div></div></div><div class="post animated"><div class="post-title"><h3><a href="/2024/04/30/some-frida-scripts/">some frida scripts</a></h3></div><div class="post-content"><p>
-
-
-frida script
-status
-
-
-
-hook java Android Api
-√
-
-
-hook new StringBuilder
-√
-
-
-modify func retVal
-√
-
-
-traceback
-√
-
-
-hook native func
-√
-
-
-hook win dll
-√
-
-
-
+ <!-- Umami Analytics -->
 
 
-...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2024-04-30</span><i class="fa fa-tag"></i><a class="tag" href="/tags/Android/" title="Android">Android </a><i class="fa fa-tag"></i><a class="tag" href="/tags/Frida/" title="Frida">Frida </a><span class="leancloud_visitors"></span><span>About 1310 words, 4 min 22 sec  read</span></div></div></div></div><div class="post animated"><div class="post-title"><h3><a href="/2024/04/29/hash%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB%E4%B8%8E%E4%BE%8B%E9%A2%98hash-append/">hash拓展攻击与例题hash_append</a></h3></div><div class="post-content"><p>hash 长度拓展攻击是一个效果还挺“惊人”的攻击。简单的来说，他能在只知道“一部分”密文的情况下，获得和“完整”密文相同的 hash 结果。只要满足条件，这个攻击现在对 MD5、SHA1、SHA256、SHA512 和 SM3 都能生效。
-这个攻击的原理是目前这些主流哈希计算的一个薄弱点。这些哈希计算是基于对明...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2024-04-29</span><i class="fa fa-tag"></i><a class="tag" href="/tags/CTF/" title="CTF">CTF </a><i class="fa fa-tag"></i><a class="tag" href="/tags/Crypto/" title="Crypto">Crypto </a><span class="leancloud_visitors"></span><span>About 1516 words, 5 min 3 sec  read</span></div></div></div></div><div class="pagination"><ul class="clearfix"><li class="next pagbuttons"><a class="btn" role="navigation" href="/page/2/">Next</a></li></ul></div></div></div></div></main-outlet><script>(function(window){var INSIGHT_CONFIG={TRANSLATION:{POSTS:"Posts",PAGES:"Pages",CATEGORIES:"Categories",TAGS:"Tags",UNTITLED:"(Untitled)",},CONTENT_URL:"/content.json",};window.INSIGHT_CONFIG=INSIGHT_CONFIG})(window);</script><script src="/js/insight.js" defer></script><div class="searchbox ins-search"><div class="searchbox-container ins-search-container"><div class="searchbox-input-wrapper"><input class="searchbox-input ins-search-input" type="text" placeholder="Search..."><span class="searchbox-close"><a class="fa fa-times-circle" onclick="closeWindow();"></a></span></div><div class="searchbox-result-wrapper ins-section-wrapper"><div class="ins-section-container"><p>Seraching...</p></div></div></div></div></body></html>
+	<!-- styles -->
+	
+<link rel="stylesheet" href="/css/style.css">
+
+	<!-- persian styles -->
+	
+	<!-- rss -->
+	 
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Air_katty" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+    <div class="content index py4 h-card">
+        
+          <header id="header">
+  <a class="u-url u-uid" href="/">
+  
+    
+      <img id="logo" alt class="u-logo" src="/images/mimi.gif" />
+    
+  
+    <div id="title">
+      <h1 class="p-name">Air_katty</h1>
+    </div>
+  </a>
+  <div id="nav">
+    <ul>
+      <li class="icon">
+        <a href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-2x"></i></a>
+      </li>
+      <!--
+     --><li><a href="/">Home</a></li><!--
+   --><!--
+     --><li><a href="/about/">About</a></li><!--
+   --><!--
+     --><li><a href="/archives/">Writing</a></li><!--
+   --><!--
+     --><li><a target="_blank" rel="noopener" href="http://github.com/probberechts">Projects</a></li><!--
+   -->
+    </ul>
+  </div>
+</header>
+
+        
+        <section id="about" class="p-note">
+  
+  
+    <p>
+      Find me on
+      
+      
+      
+        
+        
+          <a class="icon u-url" target="_blank" rel="noopener me" href="http://github.com/probberechts/cactus-dark" aria-label="github" title="github">
+            <i class="fa-brands fa-github"></i><!--
+      ---></a><!--
+    ---><!--
+    --->, 
+        
+      
+        
+        
+          <a class="icon u-url" target="_blank" rel="noopener me" href="/" aria-label="twitter" title="twitter">
+            <i class="fa-brands fa-twitter"></i><!--
+      ---></a><!--
+    ---><!--
+    --->, 
+        
+      
+        
+        
+          <a class="icon u-url" target="_blank" rel="noopener me" href="/" aria-label="facebook" title="facebook">
+            <i class="fa-brands fa-facebook"></i><!--
+      ---></a><!--
+    ---><!--
+    --->, 
+        
+      
+        
+        
+          <a class="icon u-email" target="_blank" rel="noopener" href="mailto:name@email.com" aria-label="mail" title="mail">
+            <i class="fa-solid fa-envelope"></i><!--
+      ---></a>
+        <!--
+    --->, 
+        
+      
+        
+        
+          <a class="icon u-url" target="_blank" rel="noopener me" href="https://mastodon.social/@alice" aria-label="mastodon.social" title="mastodon.social">
+            <i class="fa-brands fa-mastodon"></i><!--
+      ---></a><!--
+    ---><!--
+    ---> and 
+        
+      
+        
+        
+          <a class="icon u-url" target="_blank" rel="noopener me" href="https://fosstodon.org/@alice" aria-label="fosstodon.org" title="fosstodon.org">
+            <i class="fa-brands fa-mastodon"></i><!--
+      ---></a><!--
+    ---><!--
+    --->.
+        
+      
+    </p>
+  
+</section>
+
+<section id="writing">
+  <span class="h1"><a href="/archives/">Writing</a></span>
+  
+  <ul class="post-list">
+    
+    
+      
+    
+    
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2024-08-12T11:58:53.000Z" class="dt-published" itemprop="datePublished">2024-08-12</time>
+        
+      
+    </div>
+
+
+        <span>
+    
+        <a class="" href="/2024/08/12/%E5%BC%80%E5%8F%91%E7%9C%8B%E6%9D%BF/">开发看板</a>
+    
+
+
+</span>
+      </li>
+    
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2024-07-17T07:39:09.000Z" class="dt-published" itemprop="datePublished">2024-07-17</time>
+        
+      
+    </div>
+
+
+        <span>
+    
+        <a class="" href="/2024/07/17/hexo-%E5%8D%9A%E5%AE%A2%E5%8A%A0%E5%85%A5%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%9A%84%E6%96%B9%E6%B3%95%E7%AE%80%E8%BF%B0/">hexo、github博客加入搜索引擎的方法简述</a>
+    
+
+
+</span>
+      </li>
+    
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2024-07-15T08:03:42.000Z" class="dt-published" itemprop="datePublished">2024-07-15</time>
+        
+      
+    </div>
+
+
+        <span>
+    
+        <a class="" href="/2024/07/15/blowfish%E4%BE%8B%E9%A2%98-RCTF-DontEatMe/">blowfish例题 RCTF-DontEatMe</a>
+    
+
+
+</span>
+      </li>
+    
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2024-06-18T07:40:23.000Z" class="dt-published" itemprop="datePublished">2024-06-18</time>
+        
+      
+    </div>
+
+
+        <span>
+    
+        <a class="" href="/2024/06/18/Short-solution-about-unicorn-error-Could-not-allocate-dynamic-translator-buffer/">Short solution about unicorn error: Could not allocate dynamic translator buffer</a>
+    
+
+
+</span>
+      </li>
+    
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2024-06-17T02:03:34.000Z" class="dt-published" itemprop="datePublished">2024-06-17</time>
+        
+      
+    </div>
+
+
+        <span>
+    
+        <a class="" href="/2024/06/17/Adjustment-about-unresolved-stack-usage-in-binary-ninja/">Adjustment about unresolved stack usage in binary ninja</a>
+    
+
+
+</span>
+      </li>
+    
+  </ul>
+  
+</section>
+
+
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2024
+    Aircat
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/probberechts">Projects</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
