@@ -14,12 +14,12 @@
 		type="text/css"
 		href="https://fonts.font.im/css?family=Noto+Sans+SC:normal,bold,italic"
 	/>
-	<meta name="description" content="#upx #packer近期见到不少UPX魔改壳，需要走linux手脱，这里简单记录一个demo和一个实例的手脱例子魔改实例 demo手脱简单写一个测试程序 123456789#include&lt;stdio.h&gt;void hello()&#123;        printf(&quot;here is hello!\n&quot;);&#125;int main()&#123;">
+	<meta name="description" content="#upx #packer近期见到不少UPX魔改壳，需要走linux手脱，这里简单记录一个demo和一个实例的手脱例子 魔改实例下载地址 我脱ELF的UPX壳主要有两条路径。 第一条是常规分析，跟踪到几个特征点就能判断当前脱壳到了哪一步。如特殊的jmp点，连续的几个循环和call调用， 第二条是入口点判断，ELF的UPX壳基本会走到call _dl_start、init、fini函数，或者说这是EL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="UPX ELF Linux 手动动态脱壳（含一魔改壳实例）">
 <meta property="og:url" content="https://airrcat.github.io/2024/08/30/UPX-Linux-%E6%89%8B%E5%8A%A8%E5%8A%A8%E6%80%81%E8%84%B1%E5%A3%B3%EF%BC%88%E5%90%AB%E4%B8%80%E9%AD%94%E6%94%B9%E5%A3%B3%E5%AE%9E%E4%BE%8B%EF%BC%89/index.html">
 <meta property="og:site_name" content="Air_katty">
-<meta property="og:description" content="#upx #packer近期见到不少UPX魔改壳，需要走linux手脱，这里简单记录一个demo和一个实例的手脱例子魔改实例 demo手脱简单写一个测试程序 123456789#include&lt;stdio.h&gt;void hello()&#123;        printf(&quot;here is hello!\n&quot;);&#125;int main()&#123;">
+<meta property="og:description" content="#upx #packer近期见到不少UPX魔改壳，需要走linux手脱，这里简单记录一个demo和一个实例的手脱例子 魔改实例下载地址 我脱ELF的UPX壳主要有两条路径。 第一条是常规分析，跟踪到几个特征点就能判断当前脱壳到了哪一步。如特殊的jmp点，连续的几个循环和call调用， 第二条是入口点判断，ELF的UPX壳基本会走到call _dl_start、init、fini函数，或者说这是EL">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://airrcat.github.io/2024/08/30/UPX-Linux-%E6%89%8B%E5%8A%A8%E5%8A%A8%E6%80%81%E8%84%B1%E5%A3%B3%EF%BC%88%E5%90%AB%E4%B8%80%E9%AD%94%E6%94%B9%E5%A3%B3%E5%AE%9E%E4%BE%8B%EF%BC%89/image-10.png">
 <meta property="og:image" content="https://airrcat.github.io/2024/08/30/UPX-Linux-%E6%89%8B%E5%8A%A8%E5%8A%A8%E6%80%81%E8%84%B1%E5%A3%B3%EF%BC%88%E5%90%AB%E4%B8%80%E9%AD%94%E6%94%B9%E5%A3%B3%E5%AE%9E%E4%BE%8B%EF%BC%89/image-11.png">
@@ -47,7 +47,7 @@
 <meta property="og:image" content="https://airrcat.github.io/2024/08/30/UPX-Linux-%E6%89%8B%E5%8A%A8%E5%8A%A8%E6%80%81%E8%84%B1%E5%A3%B3%EF%BC%88%E5%90%AB%E4%B8%80%E9%AD%94%E6%94%B9%E5%A3%B3%E5%AE%9E%E4%BE%8B%EF%BC%89/image-33.png">
 <meta property="og:image" content="https://airrcat.github.io/2024/08/30/UPX-Linux-%E6%89%8B%E5%8A%A8%E5%8A%A8%E6%80%81%E8%84%B1%E5%A3%B3%EF%BC%88%E5%90%AB%E4%B8%80%E9%AD%94%E6%94%B9%E5%A3%B3%E5%AE%9E%E4%BE%8B%EF%BC%89/image-34.png">
 <meta property="article:published_time" content="2024-08-30T06:14:56.000Z">
-<meta property="article:modified_time" content="2024-08-30T07:34:54.000Z">
+<meta property="article:modified_time" content="2024-08-30T08:59:26.000Z">
 <meta property="article:author" content="Aircat">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://airrcat.github.io/2024/08/30/UPX-Linux-%E6%89%8B%E5%8A%A8%E5%8A%A8%E6%80%81%E8%84%B1%E5%A3%B3%EF%BC%88%E5%90%AB%E4%B8%80%E9%AD%94%E6%94%B9%E5%A3%B3%E5%AE%9E%E4%BE%8B%EF%BC%89/image-10.png">    
@@ -185,7 +185,13 @@
   
 
   <div class="content e-content" itemprop="articleBody">
-    <p>#upx #packer<br>近期见到不少UPX魔改壳，需要走linux手脱，这里简单记录<strong>一个demo</strong>和<strong>一个实例</strong>的手脱例子<br><a target="_blank" rel="noopener" href="https://github.com/Airrcat/-/blob/main/UPX%20PRO">魔改实例</a></p>
+    <p>#upx #packer<br>近期见到不少UPX魔改壳，需要走linux手脱，这里简单记录<strong>一个demo</strong>和<strong>一个实例</strong>的手脱例子</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/Airrcat/-/blob/main/UPX%20PRO">魔改实例下载地址</a></p>
+<pre><code>我脱ELF的UPX壳主要有两条路径。
+第一条是常规分析，跟踪到几个特征点就能判断当前脱壳到了哪一步。如特殊的jmp点，连续的几个循环和call调用，
+第二条是入口点判断，ELF的UPX壳基本会走到call _dl_start、init、fini函数，或者说这是ELF程序函数头的特征，那么我们只需要调试到call _dl_start等初始化函数时，就能知道脱壳已完成了。
+上述两条思路均有在下文中体现。
+</code></pre>
 <h2 id="demo手脱"><a href="#demo手脱" class="headerlink" title="demo手脱"></a>demo手脱</h2><p>简单写一个测试程序</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">hello</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;here is hello!\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">        hello();</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;here is main!\n&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>普通编译指令</p>
