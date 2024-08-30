@@ -121,7 +121,7 @@
     
     
       <div id="toc">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">1. Tool for search ip and domain in binary stream</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">2. Tool for search keyword in file</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">3. Tool for load pe file and parse pe info in unicorn2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">4. Tool for anti obf and control flow flattening</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Tool-for-search-ip-and-domain-in-binary-stream"><span class="toc-number">1.</span> <span class="toc-text">1. Tool for search ip and domain in binary stream</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Tool-for-search-keyword-in-file"><span class="toc-number">2.</span> <span class="toc-text">2. Tool for search keyword in file</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Tool-for-load-pe-file-and-parse-pe-info-in-unicorn2"><span class="toc-number">3.</span> <span class="toc-text">3. Tool for load pe file and parse pe info in unicorn2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Tool-for-anti-obf-and-control-flow-flattening"><span class="toc-number">4.</span> <span class="toc-text">4. Tool for anti obf and control flow flattening</span></a></li></ol>
       </div>
     
   </span>
@@ -161,14 +161,14 @@
   
 
   <div class="content e-content" itemprop="articleBody">
-    <h2><span id="1-tool-for-search-ip-and-domain-in-binary-stream">1. Tool for search ip and domain in binary stream</span></h2><p><strong>编写语言</strong>：Python<br><strong>开发状态</strong>：基本完成</p>
+    <h2 id="1-Tool-for-search-ip-and-domain-in-binary-stream"><a href="#1-Tool-for-search-ip-and-domain-in-binary-stream" class="headerlink" title="1. Tool for search ip and domain in binary stream"></a>1. Tool for search ip and domain in binary stream</h2><p><strong>编写语言</strong>：Python<br><strong>开发状态</strong>：基本完成</p>
 <p>基本完成，但是因为和关键词搜索撞了，还得重新做一下。<br><strong>todo</strong></p>
 <ul>
 <li><input disabled type="checkbox"> 做成pyd</li>
 <li><input disabled type="checkbox"> 做成命令行工具</li>
 <li><input disabled type="checkbox"> 拆分</li>
 </ul>
-<h2><span id="2-tool-for-search-keyword-in-file">2. Tool for search keyword in file</span></h2><p><strong>编写语言</strong>：Python<br><strong>开发状态</strong>：初步</p>
+<h2 id="2-Tool-for-search-keyword-in-file"><a href="#2-Tool-for-search-keyword-in-file" class="headerlink" title="2. Tool for search keyword in file"></a>2. Tool for search keyword in file</h2><p><strong>编写语言</strong>：Python<br><strong>开发状态</strong>：初步</p>
 <ol>
 <li>完成任务实践</li>
 <li>基本能读完csv</li>
@@ -184,7 +184,7 @@
 <li><input disabled type="checkbox"> 交互优化</li>
 <li><input disabled type="checkbox"> 结果优化</li>
 </ul>
-<h2><span id="3-tool-for-load-pe-file-and-parse-pe-info-in-unicorn2">3. Tool for load pe file and parse pe info in unicorn2</span></h2><p><strong>MAIN TARGET</strong><br><strong>编写语言</strong>：Python<br><strong>开发状态</strong>：初步<br>期待实现一个自动装载PE段、解析导入表、导入函数，能自动解析导入函数的功能，这样在做模拟执行时，我只需要考虑hook的功能。</p>
+<h2 id="3-Tool-for-load-pe-file-and-parse-pe-info-in-unicorn2"><a href="#3-Tool-for-load-pe-file-and-parse-pe-info-in-unicorn2" class="headerlink" title="3. Tool for load pe file and parse pe info in unicorn2"></a>3. Tool for load pe file and parse pe info in unicorn2</h2><p><strong>MAIN TARGET</strong><br><strong>编写语言</strong>：Python<br><strong>开发状态</strong>：初步<br>期待实现一个自动装载PE段、解析导入表、导入函数，能自动解析导入函数的功能，这样在做模拟执行时，我只需要考虑hook的功能。</p>
 <ol>
 <li>完成x86 PE解析</li>
 <li>完成段加载</li>
@@ -196,7 +196,7 @@
 <li><input disabled type="checkbox"> 函数自动解析</li>
 <li><input disabled type="checkbox"> 模板化</li>
 </ul>
-<h2><span id="4-tool-for-anti-obf-and-control-flow-flattening">4. Tool for anti obf and control flow flattening</span></h2><p><strong>编写语言</strong>：Python<br><strong>开发状态</strong>：筹划</p>
+<h2 id="4-Tool-for-anti-obf-and-control-flow-flattening"><a href="#4-Tool-for-anti-obf-and-control-flow-flattening" class="headerlink" title="4. Tool for anti obf and control flow flattening"></a>4. Tool for anti obf and control flow flattening</h2><p><strong>编写语言</strong>：Python<br><strong>开发状态</strong>：筹划</p>
 <p>unicorn、qiling trace指令并dump，把平坦化、混淆的指令线性化。</p>
 
   </div>
@@ -225,7 +225,7 @@
     
     
       <div id="toc-footer" style="display: none">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">1. Tool for search ip and domain in binary stream</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">2. Tool for search keyword in file</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">3. Tool for load pe file and parse pe info in unicorn2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">4. Tool for anti obf and control flow flattening</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Tool-for-search-ip-and-domain-in-binary-stream"><span class="toc-number">1.</span> <span class="toc-text">1. Tool for search ip and domain in binary stream</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Tool-for-search-keyword-in-file"><span class="toc-number">2.</span> <span class="toc-text">2. Tool for search keyword in file</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Tool-for-load-pe-file-and-parse-pe-info-in-unicorn2"><span class="toc-number">3.</span> <span class="toc-text">3. Tool for load pe file and parse pe info in unicorn2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Tool-for-anti-obf-and-control-flow-flattening"><span class="toc-number">4.</span> <span class="toc-text">4. Tool for anti obf and control flow flattening</span></a></li></ol>
       </div>
     
 
